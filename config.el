@@ -76,3 +76,14 @@
 ;; (setq doom-font (font-spec :family "Inconsolata" :size 15))
 (set-frame-font "Inconsolata")
 (set-face-attribute 'default nil :height 150)
+
+;; CUSTOM FUNCTIONS
+
+(defun my/create-terminal-at-proj-root ()
+    "Opens a new vertically split pane and opens a termina at the project root inside the buffer"
+  (interactive)
+  (evil-window-vsplit)
+  (projectile-run-term "/bin/bash"))
+
+(global-set-key (kbd "C-M-t")
+                'my/create-terminal-at-proj-root)
