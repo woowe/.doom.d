@@ -27,7 +27,6 @@
 
 ;; angular mode
 (require 'ng2-mode)
-
 ;; php mode
 (require 'php-mode)
 
@@ -76,6 +75,19 @@
 ;; (setq doom-font (font-spec :family "Inconsolata" :size 15))
 (set-frame-font "Inconsolata")
 (set-face-attribute 'default nil :height 150)
+
+;; (setq font-lock-support-mode 'jit-lock-mode)
+;; (setq jit-lock-stealth-time 16
+;;       jit-lock-defer-contextually t
+;;       jit-lock-stealth-nice 0.5)
+;; (setq-default font-lock-multiline t)
+
+;; (setq jit-lock-defer-time 0)
+;; (setq fast-but-imprecise-scrolling t)
+
+(setq make-backup-files nil) ; stop creating backup~ files
+(setq auto-save-default nil) ; stop creating #autosave# files
+(setq create-lockfiles nil) ; stop creating #autosave# files
 
 ;; CUSTOM FUNCTIONS
 
