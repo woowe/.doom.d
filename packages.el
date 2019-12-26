@@ -41,3 +41,10 @@
 ;; This is required for some packages whose default branch isn't 'master' (which
 ;; our package manager can't deal with; see raxod502/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
+
+(package! typescript-mode)
+(package! tide)
+(package! ng2-mode)
+(package! dockerfile-mode)
+(package! prettier-js :recipe (:host github :repo "prettier/prettier-emacs"))
+(package! doom-themes)

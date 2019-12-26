@@ -49,3 +49,59 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+;;
+
+(add-to-list 'custom-theme-load-path "~/.doom.d/themes/challenger-deep-theme")
+
+;; ;; typescript mode
+;; (require 'typescript-mode)
+
+;; ;; tide mode
+;; (defun setup-tide-mode ()
+;;   (interactive)
+;;   (tide-setup)
+;;   (flycheck-mode +1)
+;;   (setq flycheck-check-syntax-automatically '(save mode-enabled))
+;;   (eldoc-mode +1)
+;;   (tide-hl-identifier-mode +1)
+;;   ;; company is an optional dependency. You have to
+;;   ;; install it separately via package-install
+;;   ;; `M-x package-install [ret] company`
+;;   (company-mode +1))
+
+;; ;; aligns annotation to the right hand side
+;; (setq company-tooltip-align-annotations t)
+
+;; (add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+;; ;; angular mode
+;; (require 'ng2-mode)
+;; ;; php mode
+;; (require 'php-mode)
+
+;; ;; dockerfile mode
+;; (require 'dockerfile-mode)
+;; (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
+;; ;; prettier
+;; (setq prettier-js-args '(
+;;   "--single-quote" "true"
+;; ))
+;; (require 'prettier-js)
+;; (add-hook 'typescript-mode-hook 'prettier-js-mode)
+;; (add-hook 'web-mode-hook 'prettier-js-mode)
+;; (add-hook 'ng2-ts-mode-hook 'prettier-js-mode)
+;; (add-hook 'ng2-html-mode-hook 'prettier-js-mode)
+;; (add-hook 'js2-mode-hook 'prettier-js-mode)
+;; (add-hook 'js-mode-hook 'prettier-js-mode)
+
+;; doom themes
+(require 'doom-themes)
+
+;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
+;; may have their own settings.
+;; (load-theme 'doom-one t)
+(load-theme 'challenger-deep t)
+
+;; (global-set-key (kbd "C-M-t")
+;;                 'my/create-terminal-at-proj-root)
