@@ -47,4 +47,5 @@
 (package! ng2-mode)
 (package! dockerfile-mode)
 (package! prettier-js :recipe (:host github :repo "prettier/prettier-emacs"))
+(package! helm-twitch :recipe (:host github :repo "atheriel/helm-twitch"))
 (package! doom-themes)

@@ -39,6 +39,7 @@
       (ct-red-d       "#ff5f00")
       (red            "#ff8080")
       (ct-red         "#ff8787")
+      (ct-red-dd      "#800000")
       (orange         "#C46E01")
       (magenta        "#c991e1")
       (ct-magenta     "#d7afff")
@@ -57,6 +58,8 @@
       (ct-green       "#5fffaf")
       (green-d        "#62d196")
       (ct-green-d     "#5fd787")
+      (green-dd       "#128046")
+      (ct-green-dd    "#006400")
       )
 
 
@@ -72,7 +75,7 @@
          (comments        red)
          (doc-comments    orange)
          ;; (doc-comments    green-d)
-         (constants       magenta-b)
+         (constants       magenta-d)
          (functions       magenta)
          (keywords        white-b)
          (methods         magenta)
@@ -334,6 +337,10 @@
      `(window-divider-last-pixel   ((,c (:foreground ,vertical-bar))
                                     (,ct (:foreground ,ct-vertical-bar))))
 
+      `(fill-column-indicator      ((,c (:foreground ,grey-ddd))
+                                    (,ct (:foreground ,ct-grey-ddd))))
+
+
      ;; Plugins
      ;; Avy
      `(avy-lead-face-0    ((,c (:background ,search-bg :foreground ,search-fg))
@@ -355,8 +362,8 @@
                                     (,ct (:background ,ct-selection))))
      `(company-tooltip-mouse       ((,c (:background ,magenta :foreground ,bg))
                                     (,ct (:background ,ct-magenta :foreground ,ct-bg))))
-     `(company-tooltip-annotation  ((,c (:foreground ,magenta-d))
-                                    (,ct (:foreground ,ct-magenta-d))))
+     `(company-tooltip-annotation  ((,c (:foreground ,cyan))
+                                    (,ct (:foreground ,ct-cyan))))
      `(company-scrollbar-bg        ((,c (:background ,black))
                                     (,ct (:background ,ct-black))))
      `(company-scrollbar-fg        ((,c (:background ,blue))
@@ -387,6 +394,18 @@
                                     (,ct (:foreground ,ct-vc-deleted))))
      `(diff-hl-insert              ((,c (:foreground ,vc-added))
                                     (,ct (:foreground ,ct-vc-added))))
+
+     `(diff-refine-changed         ((,c (:background ,yellow-d))
+                                    (,ct (:background ,ct-yellow-d))))
+     `(diff-refine-added           ((,c (:background ,green-dd
+                                         :foreground ,green))
+                                    (,ct (:background ,ct-green-dd
+                                          :foreground ,ct-green))))
+     `(diff-refine-removed         ((,c (:background ,ct-red-dd
+                                         :foreground ,red))
+                                    (,ct (:background ,ct-red-dd
+                                         :foreground ,ct-red))))
+
      ;; ediff
      `(ediff-fine-diff-A    ((,c (:background ,yellow :foreground ,black :bold ,bold))
                              (,ct (:background ,ct-yellow :foreground ,ct-black :bold ,bold))))
@@ -622,11 +641,11 @@
      `(magit-diff-added                 ((,c (:foreground ,vc-added))
                                          (,ct (:foreground ,ct-vc-added))))
      `(magit-diff-added-highlight       ((,c (:background ,vc-added :foreground ,bg))
-                                         (,ct (:background ,ct-vc-added :foreground ,bg))))
+                                         (,ct (:background ,ct-vc-added :foreground , ct-green-dd))))
      `(magit-diff-removed               ((,c (:foreground ,vc-deleted))
                                          (,ct (:foreground ,ct-vc-deleted))))
      `(magit-diff-removed-highlight     ((,c (:background ,vc-deleted :foreground ,bg))
-                                         (,ct (:background ,ct-vc-deleted :foreground ,bg))))
+                                         (,ct (:background ,ct-vc-deleted :foreground , ct-red-dd))))
      `(smerge-refined-added             ((,c (:foreground ,vc-added))
                                          (,ct (:foreground ,ct-vc-added))))
      `(smerge-refined-removed           ((,c (:foreground ,vc-deleted))
