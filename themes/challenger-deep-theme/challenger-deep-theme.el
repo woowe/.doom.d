@@ -18,7 +18,7 @@
       (bold           t)
       (italic         t)
 
-      (black          "#100e23")
+      (black          "#000")
       (ct-black       "#121212")
       (white-b        "#ffffff")
       (white          "#cbe3e7")
@@ -63,7 +63,7 @@
       )
 
 
-  (let* ((bg              "#1b182c")
+  (let* ((bg              "#000")
          (ct-bg           "#1c1c1c")
 
          (fg              grey)
@@ -102,7 +102,7 @@
          ;; mode line
          (modeline-fg    grey)
          (modeline-fg-l  blue)
-         (modeline-bg    black)
+         (modeline-bg    ct-bg)
          (modeline-bg-l  blue)
          (modeline-fg-inactive grey-dd)
          (modeline-bg-inactive black)
